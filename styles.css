@@ -1,0 +1,26 @@
+/*This style sheet applies styles based off part 8 of part 2   */
+
+
+#locations{
+    background-color: aquamarine;
+    margin: 0.5em 0.5em 0.5em 0.5em;
+}
+
+#score{
+background-color: blanchedalmond;
+margin: 0.5em 0.5em 0.5em 0.5em;
+padding: auto;
+}
+
+#help{
+    background-color: red;
+    color: beige;
+    margin: 0.5em 0.5em 0.5em 0.5em;
+    padding: auto;
+}
+
+
+p:not(.container-fluid) {
+    background-color: yellow;
+    margin: 0.5em 0.5em 0.5em 0.5em;
+}
