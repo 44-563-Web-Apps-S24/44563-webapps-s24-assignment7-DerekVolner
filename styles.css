@@ -26,4 +26,5 @@ text-align: center;
  p {
     background-color: yellow;
     margin: 0.5em 0.5em 0.5em 0.5em;
+    text-align: center;
 }
