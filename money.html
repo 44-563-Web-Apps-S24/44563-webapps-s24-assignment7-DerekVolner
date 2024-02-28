@@ -223,6 +223,9 @@
         current_position=ids[position]
 
         lastLocation=position
+        if(gameOver==true){
+            
+        }
 
         //this will check first if monster has been hit.
         if(position==monsterLocation){
@@ -231,6 +234,7 @@
             gameOver=true
             score-=5
             document.getElementById("score").innerText=("Score is "+score)
+            locations+=1
         }
 
         //this is for checking every location donoted as fancy coins
@@ -240,6 +244,7 @@
                 fancy=document.getElementById(current_position).src="square fancy coin.jpg"
                 score+=3
                 document.getElementById("score").innerText=("Score is "+score)
+                locations+=1
                 break;
                 
             }
@@ -250,9 +255,9 @@
             normal=document.getElementById(current_position).src="square-coin.jpg"
             score+=1
             document.getElementById("score").innerText=("Score is "+score)
+            locations+=1
 
         }
-        locations+=1
         //this is for part h of 11
         document.getElementById("locations").innerText=("Number of locations checked is " + locations +"."  )
 
