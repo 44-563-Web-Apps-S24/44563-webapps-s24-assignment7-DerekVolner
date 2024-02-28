@@ -20,7 +20,7 @@
         Count
     </div>
 
-    <button type="button">
+    <button type="button" onclick="startTime()">
         Start Timer
     </button>
 
@@ -29,12 +29,35 @@
     </button>
   
   <script> 
-    var stopTime = undefined
+    let stopTime = undefined
 
     function recordTime(){
         stopTime=Date.now()
         console.log(stopTime)
     }
+    
+    function startTime(){
+
+        //i needs to be let here so it can update count.
+        for(let i=0; i<5; i++){
+            setTimeout(function(){
+              document.getElementById("counter").innerHTML=i
+              }, (4-i)*1000 ) 
+            
+        }
+        setTimeout(function(){
+            if(stopTime==undefined){
+                document.getElementById("target").innerHTML="Too Slow"
+            }
+            else{
+                difference= (stopTime=Date.now()-stopTime)
+                document.getElementById("target").innerHTML="Time was "+ difference
+
+            }
+         }, 4000 ) 
+
+    }
+    
   </script>
 
 </body>
